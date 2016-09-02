@@ -9,7 +9,7 @@ cdDevice="/dev/sr0"
 instDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Audio directory
-audioDir="$instDir"/data
+audioDir="$instDir"/audio
 
 function changeCD {
                 eject $cdDevice
