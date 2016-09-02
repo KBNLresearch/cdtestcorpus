@@ -6,4 +6,6 @@ The contents of this repo (data, script) can be used to create test CDs in a num
 
 Download the contents of this repo or clone it with Git. Then run the shell script on a machine with a CD/DVD writer. Before running the script check the value of the `cdDevice` variable and modify it if necessary. The script prompts the user to insert a new blank CD after the previous one is written.
 
+## Resources
 
+[CD Writing Howto - MULTISESSION CD-ROMS](http://howto-pages.org/cdwriting/08.php)
