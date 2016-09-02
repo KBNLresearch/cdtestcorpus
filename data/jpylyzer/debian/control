@@ -1,0 +1,17 @@
+Source: jpylyzer
+Section: utils
+Priority: extra
+Maintainer: Open Preservation Foundation <jpylyzer-dev@openplanetsfounation.org>
+Build-Depends: debhelper (>= 7), perl
+Standards-Version: 3.8.3
+Homepage: https://github.com/openpreserve/jpylyzer
+
+Package: jpylyzer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: JP2 (JPEG 2000 Part 1) validator and properties extractor.
+ Validator and feature extractor for JP2 (JPEG 2000 Part 1 - ISO/IEC 15444‐1)
+ images. Jpylyzer was specifically created to check that a JP2 file really 
+ conforms to the format's specifications. Additionally jpylyzer is able to 
+ extract the technical characteristics of each image.
+ 

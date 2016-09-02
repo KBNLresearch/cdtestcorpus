@@ -1,0 +1,79 @@
+=head1 NAME
+
+jpylyzer - JP2 (JPEG 2000 Part 1) image validator and properties extractor.
+
+=head1 SYNOPSIS
+
+jpylyzer [I<options>] [I<jp2In>]
+
+=head1 DESCRIPTION
+
+JP2 (JPEG 2000 Part 1) image validator and properties extractor
+    (C) National Library of the Netherlands / Open Preservation Foundation
+
+=head1 OPTIONS
+
+=over 8
+
+=item B<-h, --help>
+
+Show a help message and exit.
+
+=item B<-v, --version>
+
+Show program's version number and exit.
+
+=item B<--verbose>
+
+Report test results in verbose format.
+
+=item B<--recurse, -r>
+
+When analysing a directory, recurse into subdirectories (implies --wrapper).
+
+=item B<--wrapper, -w>
+
+Wrap output for individual image(s) in 'results' XML element.
+
+=item B<--nullxml>
+
+Extract null-terminated XML content from XML and UUID boxes(doesn't affect validation).
+
+=item B<--nopretty>
+
+Suppress pretty-printing of XML output.
+
+=back
+
+=head1 ARGUMENTS
+
+=over 8
+
+=item B<jp2In>
+
+Input JP2 image(s), may be one or more (whitespace-separated) path expressions; 
+prefix wildcard (*) with backslash.
+
+=back
+
+=head1 BUGS
+
+Please report bugs at https://github.com/openpreserve/jpylyzer/issues.
+
+=head1 AUTHORS
+
+B<jpylyzer> was written by Johan van der Knijff <Johan.vanderKnijff@kb.nl> and others.
+
+This manual page was written by Rui Castro <rcastro@keep.pt>.
+
+=head1 COPYRIGHT
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License as published by the
+Free Software Foundation; either version 3, or (at your option) any
+later version.
+
+On Debian GNU/Linux systems, the complete text of the GNU Lesser General
+Public License can be found in '/usr/share/common-licenses/LGPL-3'.
+
+=cut

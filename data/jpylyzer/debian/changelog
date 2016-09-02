@@ -1,0 +1,91 @@
+jpylyzer (1.17.0) precise; urgency=medium
+
+  * Added detection and removal of surrogate pairs in file names
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Tue, 05 Jan 2016 17:14:33 +0100
+
+jpylyzer (1.16.3) precise; urgency=medium
+
+  * Corrected handling of Unicode characters in file names under Windows
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Thu, 10 Dec 2015 15:00:10 +0100
+
+jpylyzer (1.16.2) precise; urgency=medium
+
+  * fileName and filePath encoded as UTF-8C
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Thu, 10 Dec 2015 12:11:57 +0100
+
+jpylyzer (1.16.0) precise; urgency=medium
+
+  * Added exception handler to main image read function
+  * Added statusInfo elelement to output
+  * Added new version of XSD and output examples accordingly
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Fri, 04 Dec 2015 13:01:48 +0100
+
+jpylyzer (1.15.1) precise; urgency=medium
+
+  * Catch mmap failure for empty files (Stefan Weil)
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Thu, 03 Dec 2015 14:36:49 +0100
+
+jpylyzer (1.15.0) precise; urgency=medium
+
+  * Input file(s) now mapped into memory using mmap (based on patch 
+    by Stefan Weil)
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Thu, 03 Dec 2015 12:18:13 +0100
+
+jpylyzer (1.14.5) precise; urgency=medium
+
+  * Fixed locHasNullTerminator bug that occurred under Python 3 
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Wed, 02 Dec 2015 12:53:05 +0100
+
+jpylyzer (1.14.4) precise; urgency=medium
+
+  * Fixed Travis build error (Stefan Weil)
+  * Fixed Python runtime error (Stefan Weil)
+
+ -- Johan van der Knijff <johan.vanderknijff@kb.nl>  Wed, 02 Dec 2015 10:35:43 +0100
+
+jpylyzer (1.14.2) precise; urgency=medium
+
+  * Fixed findFile for case of 1 file matching wildcard expression 
+
+ -- johan <johan.vanderknijff@kb.nl>  Wed, 27 Mar 2015 17:04:22 +0100
+
+jpylyzer (1.14.1) precise; urgency=medium
+
+  * Fixed outdated OPF refs in Debian folder
+  * Fixed problem in schema for compressionRatio 
+
+ -- johan <johan.vanderknijff@kb.nl>  Wed, 25 Mar 2015 14:01:22 +0100
+
+jpylyzer (1.14.0) precise; urgency=medium
+
+  * Added recurse option (contributions by The National Archives) 
+  * Added namespace declaration and ref to xsd schema
+  * Updated obsolete refs to old git repo from Vagrant build scripts
+  * Improved CLI argument parsing with clearer help messages
+  * Removed MS Word / PDF versions of User Manual
+  * Added script that generates HTML versions of User Manual  
+
+ -- johan <johan.vanderknijff@kb.nl>  Fri, 24 Mar 2015 15:52:36 +0100
+
+jpylyzer (1.13.0) precise; urgency=low
+
+  * Added -nullxml option
+  * Output now pretty printed by default
+  * Improved  handling of UTF-8
+  * Added validation of codestream comments
+  * Added check for null-terminator in url box
+
+ -- johan <johan.vanderknijff@kb.nl>  Thu, 10 Apr 2014 09:58:07 +0200
+
+jpylyzer (1.10.1) stable; urgency=low
+
+  * Initial release 
+
+ -- Carl Wilson <carl@openplanetsfoundation.org>  Fri, 20 Sep 2013 13:10:08 +0100
