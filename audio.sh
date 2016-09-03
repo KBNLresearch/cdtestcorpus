@@ -11,13 +11,9 @@ source $instDir/config.txt
 # Audio directory
 audioDir="$instDir"/audio
 
-function changeCD {
-                eject $cdDevice
-                read -p "Insert a blank CD then press enter... "
-           }
-
-changeCD
-
 # Burn to disc
 wodim -v -dao -nofix dev=$cdDevice -audio -pad $audioDir/*.wav
+
+# Eject disc
+eject $cdDevice
 

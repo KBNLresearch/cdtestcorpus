@@ -16,13 +16,6 @@ dataDir="$instDir"/data
 # Audio directory
 audioDir="$instDir"/audio
 
-function changeCD {
-                eject $cdDevice
-                read -p "Insert a blank CD then press enter... "
-           }
-
-changeCD
-
 # Write audio to first session of disc
 wodim -multi -v -dao -nofix dev=$cdDevice -audio -pad $audioDir/*.wav
 
@@ -37,4 +30,7 @@ wodim -v -dao dev=$cdDevice simple1.iso
 
 # Cleanup: remove all ISO files
 rm *.iso
+
+# Eject disc
+eject $cdDevice
 

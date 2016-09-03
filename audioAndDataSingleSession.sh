@@ -16,13 +16,6 @@ dataDir="$instDir"/data
 # Audio directory
 audioDir="$instDir"/audio
 
-function changeCD {
-                eject $cdDevice
-                read -p "Insert a blank CD then press enter... "
-           }
-
-changeCD
-
 # Make ISO for data 
 mkisofs -V "Data" -J -r -o simple1.iso $dataDir/jpylyzer/
 
@@ -31,4 +24,7 @@ wodim -v -dao -nofix dev=$cdDevice -data simple1.iso -audio -pad $audioDir/*.wav
 
 # Cleanup: remove all ISO files
 rm *.iso
+
+# Eject disc
+eject $cdDevice
 
