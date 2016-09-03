@@ -4,7 +4,7 @@ The contents of this repo (data, scripts) can be used to create test CDs in a nu
 
 ## Using the scripts
 
-Download the contents of this repo or clone it with Git. Then run the bash scripts on a machine with a CD/DVD writer. Before running the scripts, check the value of the `cdDevice` variable and modify it if necessary.
+Download the contents of this repo or clone it with Git. Open the [configuration file](/config.txt), check the value of the `cdDevice` variable, and modify it if necessary. Insert a blank CD in the CD/DVD drive, and run one of the bash scripts.
 
 ## Description of scripts
 

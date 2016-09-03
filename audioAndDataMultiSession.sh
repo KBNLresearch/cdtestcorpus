@@ -4,11 +4,11 @@
 # First session contains the audio tracks, second session contains data track
 # Adapted from: http://howto-pages.org/cdwriting/11.php
 
-# Device path of cd writer (modify if needed)
-cdDevice="/dev/sr0"
-
 # Installation directory
 instDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Read device name from config file
+source $instDir/config.txt
 
 # Data directory
 dataDir="$instDir"/data
