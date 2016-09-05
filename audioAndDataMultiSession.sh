@@ -17,7 +17,7 @@ dataDir="$instDir"/data
 audioDir="$instDir"/audio
 
 # Write audio to first session of disc
-wodim -multi -v dev=$cdDevice -audio -pad $audioDir/*.wav
+wodim -multi -v dev=$cdDevice -audio -nofix -pad $audioDir/*.wav
 
 # Info needed for next session
 msInfo=$(wodim dev=$cdDevice -msinfo)

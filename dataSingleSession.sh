@@ -15,7 +15,7 @@ dataDir="$instDir"/data
 mkisofs -V "Simple cd-rom" -J -r -o simple1.iso $dataDir/jpylyzer/
 
 # Burn to disc
-wodim -v dev=$cdDevice -data simple1.iso
+cdrecord -v dev=$cdDevice -data simple1.iso
 
 # Cleanup: remove all ISO files
 rm *.iso
