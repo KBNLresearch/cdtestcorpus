@@ -15,7 +15,7 @@ dataDir="$instDir"/data
 mkisofs -V "Simple" -J -r -o simple1.iso $dataDir/jpylyzer/
 
 # Write existing ISO to first session
-wodim -multi -tao dev=$cdDevice simple1.iso
+wodim -v -multi -dev=$cdDevice -data simple1.iso
 
 # Info needed for next session
 msInfo=$(wodim dev=$cdDevice -msinfo)
@@ -24,7 +24,7 @@ msInfo=$(wodim dev=$cdDevice -msinfo)
 mkisofs -V "Simple2" -C $msInfo -J -r -o simple2.iso $dataDir/jp2k-test/
 
 # Burn image to session 2 and close disc
-wodim -tao dev=$cdDevice simple2.iso
+wodim -v -dev=$cdDevice -data simple2.iso
 
 # Cleanup: remove all ISO files
 rm *.iso
