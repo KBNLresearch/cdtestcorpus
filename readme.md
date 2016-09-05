@@ -10,10 +10,10 @@ Download the contents of this repo or clone it with Git. Open the [configuration
 
 |Script|Description|
 |:--|:--|
-|[dataSingleSession.sh](/dataSingleSession.sh)|Creates data cd-ROM with one session|
-|[dataMultiSession.sh](/dataMultiSession.sh)|Creates data cd-ROM with two sessions (both sessions contain different data)|
+|[dataSingleSession.sh](/dataSingleSession.sh)|Creates data CD-ROM with one session|
+|[dataMultiSession.sh](/dataMultiSession.sh)|Creates data CD-ROM with two sessions (both sessions contain different data)|
 |[audio.sh](/audio.sh)|Creates audio CD with one session|
-|[audioAndDataSingleSession.sh](/audioAndDataSingleSession.sh)|Creates mixed data / audio CD with one session. First track contains data; all other tracks are audio tracks|
+|[audioAndDataSingleSession.sh](/audioAndDataSingleSession.sh)|Creates mixed data / audio CD with one session. First track contains data; all other tracks are audio tracks. **Warning**: some CD players will interpret the data track as audio, resulting in some **really loud and unpleasant noise!** To avoid damage to your ears and/or speakers you may want to keep the volume down to a very low level whenever you play this CD.|
 |[audioAndDataMultiSession.sh](./audioAndDataMultiSession.sh)|Creates mixed data / audio CD with two sessions. The first session contains all audio tracks; the second session holds the data track.|
 
 
