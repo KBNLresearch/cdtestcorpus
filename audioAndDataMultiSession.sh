@@ -26,7 +26,7 @@ msInfo=$(wodim dev=$cdDevice -msinfo)
 mkisofs -V "Data" -C $msInfo -J -r -o simple1.iso $dataDir/jpylyzer/
 
 # Write data to new session and close the disc
-wodim -v -dao dev=$cdDevice simple1.iso
+wodim -v dev=$cdDevice simple1.iso
 
 # Cleanup: remove all ISO files
 rm *.iso
