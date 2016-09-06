@@ -17,16 +17,16 @@ dataDir="$instDir"/data
 audioDir="$instDir"/audio
 
 # Write audio to first session of disc
-wodim -multi -v dev=$cdDevice -audio -nofix -pad $audioDir/*.wav
+cdrecord -multi -v dev=$cdDevice -audio -nofix -pad $audioDir/*.wav
 
 # Info needed for next session
-msInfo=$(wodim dev=$cdDevice -msinfo)
+msInfo=$(cdrecord dev=$cdDevice -msinfo)
 
 # Make ISO for next session
-mkisofs -V "Data" -C $msInfo -J -r -o simple1.iso $dataDir/jpylyzer/
+mkisofs -V "Data" -C $msInfo -J -r -R -o simple1.iso $dataDir/jpylyzer/
 
 # Write data to new session and close the disc
-wodim -v dev=$cdDevice -data simple1.iso
+cdrecord -v dev=$cdDevice -data simple1.iso
 
 # Cleanup: remove all ISO files
 rm *.iso

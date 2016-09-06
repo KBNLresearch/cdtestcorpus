@@ -17,10 +17,10 @@ dataDir="$instDir"/data
 audioDir="$instDir"/audio
 
 # Make ISO for data 
-mkisofs -V "Data" -J -r -o simple1.iso $dataDir/jpylyzer/
+mkisofs -V "Data" -J -r -R -o simple1.iso $dataDir/jpylyzer/
 
 # Burn to disc
-wodim -v -dao -nofix dev=$cdDevice -data simple1.iso -audio -pad $audioDir/*.wav
+cdrecord -v -dao -nofix dev=$cdDevice -data simple1.iso -audio -pad $audioDir/*.wav
 
 # Cleanup: remove all ISO files
 rm *.iso

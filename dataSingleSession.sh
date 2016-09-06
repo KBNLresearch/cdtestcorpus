@@ -12,7 +12,7 @@ source $instDir/config.txt
 dataDir="$instDir"/data
 
 # Make ISO
-mkisofs -V "Simple cd-rom" -J -r -o simple1.iso $dataDir/jpylyzer/
+mkisofs -V "Simple cd-rom" -J -r -R -o simple1.iso $dataDir/jpylyzer/
 
 # Burn to disc
 cdrecord -v dev=$cdDevice -data simple1.iso

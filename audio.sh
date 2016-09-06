@@ -12,7 +12,7 @@ source $instDir/config.txt
 audioDir="$instDir"/audio
 
 # Burn to disc
-wodim -v -dao -nofix dev=$cdDevice -audio -pad $audioDir/*.wav
+cdrecord -v -dao -nofix dev=$cdDevice -audio -pad $audioDir/*.wav
 
 # Eject disc
 eject $cdDevice
