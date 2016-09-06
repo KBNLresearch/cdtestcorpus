@@ -2,7 +2,7 @@
 
 The contents of this repo (data, scripts) can be used to create test CDs in a number of different CD layouts. The script uses [mkisofs](http://linux.die.net/man/8/mkisofs) and [cdrecord](http://linux.die.net/man/1/cdrecord). More materials will be added over time.
 
-**Note that the scripts and the CDs created with them have a number of issues, see explanation at bottom of thois readme!!**
+**Note that the scripts and the CDs created with them have a number of issues, see explanation at bottom of this readme!!**
 
 ## Using the scripts
 
@@ -25,7 +25,7 @@ Creating a bunch of CDs seems like a pretty trivial task, yet I encountered a nu
 - Initially I was using the [*cdrkit*](https://en.wikipedia.org/wiki/Cdrkit) tools *mkisofs* and *wodim*. Even the scripts ran without any problems on my machine, it turned out that the written data tracks were corrupted in most cases (the last bytes were usually unreadable). Moreover the multisession CDs were not recoignised at all by the DVD drive of my Windows machine. I suspected this to be related to a known [bug in cdrkit](https://bugzilla.redhat.com/show_bug.cgi?id=1065802).
 - As cdrkit hasn't been updated in ages, I then had another try with cdrtools. However this introduced new problems with the multisession scripts. First, running *cdrecord* with the *-msinfo* switch after the first session failed. Ejecting the tray, closing it again and then a re-try appears to remedy this. However, in all cases trying to burn the second session resulted in the following error:
 
-    cdrecord: Input/output error. write_g1: scsi sendcmd: no error
+        cdrecord: Input/output error. write_g1: scsi sendcmd: no error
 
 And no data was written. This could either be:
 
